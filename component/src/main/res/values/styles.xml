@@ -1,0 +1,308 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:typeface">monospace</item>
+        <item name="alertDialogTheme">@style/AppAlertDialog</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:textSelectHandle">@drawable/bubble_edittext</item>
+        <item name="android:textSelectHandleLeft">@drawable/bubble_edittext</item>
+        <item name="android:textSelectHandleRight">@drawable/bubble_edittext</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_edittext</item>
+    </style>
+
+    <style name="AppAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:windowTitleStyle">@style/WindowTitleStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/ButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/ButtonStyle</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+
+    <style name="WindowTitleStyle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppFullScreenTheme" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:textColorPrimary">@color/deep_black</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.TransparentTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BlackNoTitleBarTheme" parent="android:Theme.Black.NoTitleBar" />
+
+    <style name="ExerciseTitleStyle" parent="TextViewBold">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="EverfitTaskButtonStyle" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/opensans_bold</item>
+    </style>
+
+    <style name="Theme_Full_Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="TextTitle16MainColor" parent="TextViewBold">
+        <item name="android:textSize">@dimen/text_tittle_small</item>
+        <item name="android:textColor">@color/text_main</item>
+    </style>
+
+    <style name="TextTitle18MainColor" parent="TextViewBold">
+        <item name="android:textSize">@dimen/text_tittle_normal</item>
+        <item name="android:textColor">@color/text_main</item>
+    </style>
+
+    <style name="TextTitle20MainColor" parent="TextViewBold">
+        <item name="android:textSize">@dimen/text_tittle_big</item>
+        <item name="android:textColor">@color/text_main</item>
+    </style>
+
+    <style name="TextContextDescriptionBlackColor" parent="TextViewRegular">
+        <item name="android:textSize">@dimen/text_description</item>
+        <item name="android:textColor">@color/description_color</item>
+    </style>
+
+    <style name="TextViewBold">
+        <item name="android:fontFamily">@font/opensans_bold</item>
+    </style>
+
+    <style name="TextViewExtraBold">
+        <item name="android:fontFamily">@font/opensans_extrabold</item>
+    </style>
+
+    <style name="TextViewLight">
+        <item name="android:fontFamily">@font/opensans_light</item>
+    </style>
+
+    <style name="TextViewRegular">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+
+    <style name="TextTittleBig" parent="TextViewRegular">
+        <item name="android:textSize">@dimen/text_tittle_big</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextTitleSmall" parent="TextViewRegular">
+        <item name="android:textSize">@dimen/text_tittle_small</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextDescriptionNormal" parent="TextViewRegular">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_main</item>
+    </style>
+
+    <style name="TextViewSemiBold">
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+    </style>
+
+    <style name="DescriptionStyle" parent="TextViewRegular">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textSize">@dimen/text_description</item>
+        <item name="android:textColor">@color/description_color</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextViewRegular">
+        <item name="android:textSize">@dimen/text_extra_small</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextViewRegular">
+        <item name="android:textSize">@dimen/text_extra_small</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/text_highlights</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/section_header_background</item>
+    </style>
+
+    <style name="BottomSheetFullHeight" parent="BottomSheet">
+        <item name="behavior_skipCollapsed">true</item>
+        <item name="behavior_fitToContents">true</item>
+        <item name="behavior_peekHeight">1000dp</item>
+        // yep, that helped to skip collapsed state at initial
+        <item name="behavior_hideable">true</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="BaseBottomSheetFullHeightDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheetFullHeight</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="RoundedDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_rounded_white_background</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="FastScrollText" parent="TextViewBold">
+        <item name="android:textSize">@dimen/text_tiny</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="ClockButtonStyle" parent="TextViewBold">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ClockNumberPickerLabel" parent="TextViewBold">
+        <item name="android:textColor">#7b7e91</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ClockNumberPicker" parent="TextViewBold">
+        <item name="android:textColorPrimary">@color/purple_color</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SwitchCompatStyle">
+        <item name="thumbTint">@color/white</item>
+        <item name="track">@drawable/track_switch</item>
+        <item name="android:track">@drawable/track_switch</item>
+    </style>
+
+    <style name="ButtonPurpleRound" parent="TextViewBold">
+        <item name="android:background">@drawable/button_purple_rounded_background</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingStart">@dimen/margin_bigger</item>
+        <item name="android:paddingEnd">@dimen/margin_bigger</item>
+    </style>
+
+    <style name="ButtonPurpleRoundWhite" parent="TextViewBold">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/gray_purple</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="NumberPickerCustomText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textColorPrimary">@color/purple</item>
+        <item name="android:textColorSecondary">@color/purple</item>
+    </style>
+
+
+    <style name="SecondsTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.LightStatusBar">
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="FullDialog" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize5Percent" parent="">
+        <item name="cornerSize">5%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize10Percent" parent="">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="AlertDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:windowBackground">@drawable/dialog_rounded_white_background</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="TextViewTitleCategory" parent="TextViewBold">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="singleLine">true</item>
+    </style>
+
+    <style name="WorkoutOfCategory" parent="TextViewBold">
+        <item name="android:maxLines">2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dp_14</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="rounded_corner">
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="AppTheme.StatusBarTransparentTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+    </style>
+
+    <style name="SignUpEditext" parent="android:Widget.EditText">
+        <item name="android:background">@drawable/sign_up_edittext_background</item>
+        <item name="android:padding">14dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textColorHint">@color/sign_up_gray_hint_text_color</item>
+    </style>
+</resources>

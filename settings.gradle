@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == 'dagger.hilt.android.plugin') {
+               useModule('com.google.dagger:hilt-android-gradle-plugin:2.40.5')
+            }
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "EverfitModular"
+include ':app'
+include ':core'
+include ':domain'
+include ':data'
+include ':modular_login'
+include ':modular_main'
+include ':navigation_modular'
+include ':application_login'
+include ':component'
+include ':modular_splash'
+include ':modular_forgot_password'

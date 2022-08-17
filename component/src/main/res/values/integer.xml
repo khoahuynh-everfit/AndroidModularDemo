@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="slide_animation_duration">300</integer>
+    <integer name="max_line_header_search_detail_demand">2</integer>
+    <integer name="max_length_title_header">30</integer>
+</resources>

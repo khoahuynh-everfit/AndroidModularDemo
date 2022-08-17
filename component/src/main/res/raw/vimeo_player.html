@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <div id="myVideo">
+            <button onclick="playNow()">Click I'm Tu sida</button>
+        </div>
+
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <script>
+          var options = {
+            url: "https://vimeo.com/569849135",
+            width: 800
+          };
+
+          var videoPlayer = new Vimeo.Player("myVideo", options);
+          videoPlayer.on("play", function () {
+            console.log("Played the video");
+          });
+
+          function playNow() {
+            videoPlayer.play();
+          }
+        </script>
+    </body>
+</html>

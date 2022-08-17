@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2">
+
+        <TextView
+            android:id="@+id/txt_build_version"
+            style="@style/TextViewSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="48dp"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Version 1.0 Build 12345"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imv_logo"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_build_version"
+            app:srcCompat="@drawable/ic_everfit_logo" />
+
+        <TextView
+            android:id="@+id/txt_environment"
+            style="@style/TextViewSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="48dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/edt_email"
+            app:layout_constraintStart_toStartOf="@+id/imv_logo"
+            app:layout_constraintTop_toBottomOf="@id/imv_logo"
+            tools:text="Dev" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            style="@style/SignUpEditext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="@dimen/margin_bigger"
+            android:layout_marginEnd="44dp"
+            android:autofillHints="email"
+            android:hint="email"
+            android:inputType="text|textEmailAddress"
+            android:tag="@string/branding_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imv_logo" />
+
+        <TextView
+            android:id="@+id/txt_email_error"
+            style="@style/TextViewRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout_marginEnd="44dp"
+            android:gravity="left"
+            android:text="error message"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/edt_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_email"
+            tools:visibility="visible" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            style="@style/SignUpEditext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_semi"
+            android:ellipsize="end"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:paddingRight="100dp"
+            android:singleLine="true"
+            android:tag="@string/branding_primary"
+            app:layout_constraintEnd_toEndOf="@+id/edt_email"
+            app:layout_constraintStart_toStartOf="@+id/edt_email"
+            app:layout_constraintTop_toBottomOf="@id/txt_email_error" />
+
+        <TextView
+            android:id="@+id/txt_password_error"
+            style="@style/TextViewRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout_marginEnd="44dp"
+            android:gravity="left"
+            android:text="error message"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_password"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ic_show_password"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginRight="@dimen/margin_small"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/edt_password"
+            app:layout_constraintRight_toRightOf="@id/edt_password"
+            app:layout_constraintTop_toTopOf="@id/edt_password"
+            app:srcCompat="@drawable/ic_show_password" />
+
+        <TextView
+            android:id="@+id/txt_forgot_password"
+            style="@style/TextViewSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_semi"
+            android:text="@string/forgot_your_password"
+            android:textColor="#7B7E91"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_password_error" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/TextViewBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/branding_primary_rounded_button_background"
+            android:paddingStart="56dp"
+            android:paddingEnd="56dp"
+            android:stateListAnimator="@null"
+            android:tag="@string/branding_primary"
+            android:text="@string/log_in"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_forgot_password" />
+
+        <com.example.component.views.LoadingView
+            android:id="@+id/login_progress_bar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_looking_for_trainer_app"
+        style="@style/TextViewSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="@dimen/margin_big"
+        android:text="@string/are_you_trainer"
+        android:textColor="#7B7E91"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/content_container"
+        app:layout_constraintVertical_bias="1"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
